@@ -1,11 +1,11 @@
 /**
  * Site header
  */
+
 .site-header {
     // Positioning context for the mobile navigation icon
     position: relative;
     padding: 2em 0 0 0;
-    a { color: $dark-taupe; }
 }
 
 .photo-container,
@@ -32,17 +32,19 @@
   }
 }
 
+a {
+  color: $dark-taupe;
+  font-weight: 700;
+  &:hover {
+    color: $light-taupe;
+    text-decoration: none;
+  }
+}
+
 .social-container {
   padding: 3em;
   .fa-linkedin { margin-right: 1.3em; }
   .fa-envelope { margin-right: 0.5em; }
-  a {
-    color: $dark-taupe;
-    font-weight: 700;
-    &:hover {
-      text-decoration: none;
-    }
-  }
 }
 
 .site-title {
@@ -68,7 +70,10 @@
         letter-spacing: 1px;
         line-height: $base-line-height;
         text-transform: uppercase;
-        &:hover { text-decoration: none; }
+        &:hover {
+          color: $light-taupe;
+          text-decoration: none;
+        }
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
